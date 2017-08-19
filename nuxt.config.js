@@ -23,9 +23,12 @@ module.exports = {
   */
   modules: [
     '@nuxtjs/pwa',
-    '@nuxtjs/proxy'
+    {
+      src: '@nuxtjs/proxy',
+      ignorePath: true
+    }
   ],
-  proxy: { 
+  proxy: {
     '/api/books': 'http://localhost:4000/books'
   },
   plugins: [
